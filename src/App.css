@@ -1,0 +1,26 @@
+.page {
+    background: #FFCC2F;
+}
+
+#logo {
+    margin-left: 40%;
+}
+
+button {
+    font-family: "Segoe UI";
+    color: white;
+    background: #0262AF;
+    width: 100px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#buttons {
+    display: block;
+    margin-left: 38.5%;
+}
+
+#pokemondata {
+    display: grid;
+    grid-template: 'div div div div'
+}
