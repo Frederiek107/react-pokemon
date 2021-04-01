@@ -3,7 +3,9 @@
 }
 
 #logo {
-    margin-left: 40%;
+    margin-left: 43%;
+    max-height: 200px;
+    max-width: 200px;
 }
 
 button {
@@ -17,10 +19,11 @@ button {
 
 #buttons {
     display: block;
-    margin-left: 38.5%;
+    margin-left: 41.5%;
 }
 
 #pokemondata {
     display: grid;
-    grid-template: 'div div div div'
+    grid-template:  'div div div div div';
+    justify-items: center;
 }

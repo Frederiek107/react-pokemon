@@ -23,7 +23,6 @@ function PokemonCard({id}) {
                 console.error(error);
             }
         }
-
         catchPokemonName();
     }, [id])
 
@@ -37,7 +36,6 @@ function PokemonCard({id}) {
                 console.error(error);
             }
         }
-
         catchPokemonImage();
     }, [id])
 
@@ -47,14 +45,15 @@ function PokemonCard({id}) {
                 const result = await fetchData();
                 const abilitiesArray = result.data.abilities;
                 const abilityNames = abilitiesArray && abilitiesArray.map((ability) => {
-                    return ability.ability.name + " ";
+                    return <ul>
+                            <li key={ability.ability.name}>{ability.ability.name}</li>
+                            </ul>
                 })
                 setPokemonAbilities(abilityNames);
             } catch (error) {
                 console.error(error);
             }
         }
-
         catchPokemonAbilities();
     }, [id])
 
@@ -69,7 +68,6 @@ function PokemonCard({id}) {
                 console.error(error);
             }
         }
-
         catchPokemonWeight();
     }, [id])
 
@@ -83,17 +81,16 @@ function PokemonCard({id}) {
                 console.error(error);
             }
         }
-
         catchPokemonMoves();
     }, [id])
 
     return (
         <div className='pokemoncard'>
-            <p id='name'>{pokemonName} </p>
             <p><img src={pokemonImage} alt='pokemon'/></p>
-            <p id='abilities'>Abilities: {pokemonAbilities}</p>
-            <p>Weight: {weight} lbs</p>
-            <p>Moves: {moves}</p>
+            <h3><b>{pokemonName}</b></h3>
+            <p id='abilities'> {pokemonAbilities}</p>
+            <p><b>Weight</b>: {weight} lbs</p>
+            <p><b>Moves</b>: {moves}</p>
         </div>
     )
 }
