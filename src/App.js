@@ -12,7 +12,7 @@ function App() {
         async function getID() {
             try {
                 const result = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`);
-                const arrayWithURLS = result.data.results.map((pokemon) => {
+                const arrayWithURLS = result && result.data.results.map((pokemon) => {
                     return pokemon.url;
                 })
                 setIDarray(arrayWithURLS);

@@ -1,4 +1,4 @@
-.page {
+header {
     background: #FFCC2F;
 }
 
@@ -23,7 +23,9 @@ button {
 }
 
 #pokemondata {
+    background: #2d4f6b;
     display: grid;
-    grid-template:  'div div div div div';
     justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+

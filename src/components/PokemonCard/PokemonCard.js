@@ -14,11 +14,15 @@ function PokemonCard({id}) {
         return data;
     }
 
+    function capitalizeName(name) {
+            return name.charAt(0).toUpperCase() + name.slice(1);
+    }
+
     useEffect(() => {
         async function catchPokemonName() {
             try {
                 const result = await fetchData();
-                result && setPokemonName(result.data.name)
+                result && setPokemonName(capitalizeName(result.data.name));
             } catch (error) {
                 console.error(error);
             }
@@ -63,7 +67,6 @@ function PokemonCard({id}) {
                 const result = await fetchData();
                 const weight = result.data.weight;
                 weight && setWeight(weight);
-
             } catch (error) {
                 console.error(error);
             }
@@ -86,7 +89,7 @@ function PokemonCard({id}) {
 
     return (
         <div className='pokemoncard'>
-            <p><img src={pokemonImage} alt='pokemon'/></p>
+            <p id='image'><img src={pokemonImage} alt='pokemon'/></p>
             <h3><b>{pokemonName}</b></h3>
             <p id='abilities'> {pokemonAbilities}</p>
             <p><b>Weight</b>: {weight} lbs</p>

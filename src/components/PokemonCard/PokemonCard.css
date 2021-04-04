@@ -1,5 +1,5 @@
 .pokemoncard {
-    background: linear-gradient(#E0DFDD, white);
+    background: linear-gradient(#93b1c9, white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,5 +13,11 @@
 
 #abilities {
     width: 150px;
+    height: 125px;
 }
 
+#image {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+}
