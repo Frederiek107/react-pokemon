@@ -1,0 +1,31 @@
+header {
+    background: #FFCC2F;
+}
+
+#logo {
+    margin-left: 43%;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+button {
+    font-family: "Segoe UI";
+    color: white;
+    background: #0262AF;
+    width: 100px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#buttons {
+    display: block;
+    margin-left: 41.5%;
+}
+
+#pokemondata {
+    background: #2d4f6b;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+

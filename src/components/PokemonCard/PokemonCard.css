@@ -1,0 +1,23 @@
+.pokemoncard {
+    background: linear-gradient(#93b1c9, white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    padding: 10px;
+    margin: 20px;
+    font-family: "Segoe UI";
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+#abilities {
+    width: 150px;
+    height: 125px;
+}
+
+#image {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+}
